@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ether_test {
+	@RequestMapping("/")
+	public String getGreetingMessage() {
+		return "welcome to ether group";
+	}
 	@GetMapping("/ether/{membername}")
 	public String getEtherMessage(@PathVariable String membername) {
 		return "Hello,"+membername;
